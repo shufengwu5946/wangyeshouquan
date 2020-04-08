@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>首页</title>
+    <link rel="stylesheet" href="/public/css/home.css" />
+  </head>
+  <body>
+    <h1 class="title">首页</h1>
+    <img src="/public/img/baidu_jgylogo3.gif" alt="baidu" />
+    <br />
+    <button class="goPostButton" onclick="window.location.href='/post'">
+      发表留言
+    </button>
+    <ul class="commentList">
+      {{each comments}}
+      <li class="commentItem">{{ $value.name }}说：{{ $value.content }} ({{ $value.time }})</li>
+      {{/each}}
+    </ul>
+    <script src="/public/js/home.js"></script>
+  </body>
+</html>
